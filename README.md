@@ -31,6 +31,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
   - MI-R3P
   - R2100
   - XY-C1
+  - B70
 
 - Compilation step
   - Install dependencies
@@ -39,7 +40,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
     sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
         fakeroot kmod cpio git python3-docutils gettext automake autopoint \
         texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \
-        libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
+        libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin bc
 
     # Archlinux/Manjaro
     sudo pacman -Syu --needed git base-devel cmake gperf ncurses libmpc \
@@ -54,7 +55,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
     ```
   - Clone source code
     ```sh
-    git clone https://github.com/meisreallyba/padavan-4.4.git
+    git clone https://github.com/bishiping/padavan-4.4.git
     ```
   - Prepare toolchain
     ```sh
@@ -71,10 +72,10 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
     cd padavan-4.4/trunk
 
     # (Optional) Modify template file
-    # nano configs/templates/K2P.config
+    # nano configs/templates/B70.config
 
     # Start compiling
-    fakeroot ./build_firmware_modify K2P
+    fakeroot ./build_firmware_modify B70
 
     # To build firmware for other devices, clean the tree after previous build
     ./clear_tree
